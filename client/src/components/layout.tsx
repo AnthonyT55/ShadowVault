@@ -15,24 +15,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Logo */}
           <Link href="/">
-            <span className="text-2xl font-heading font-bold tracking-widest uppercase hover:text-primary transition-colors duration-300 cursor-pointer">
+            <div className="text-2xl font-heading font-bold tracking-widest uppercase hover:text-primary transition-colors duration-300 cursor-pointer">
               Cursed<span className="text-primary">Vault</span>
-            </span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             <Link href="/">
-              <span className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Home</span>
+              <div className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Home</div>
             </Link>
             <Link href="/shop">
-              <span className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Shop</span>
+              <div className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Shop</div>
             </Link>
             <Link href="/preorders">
-              <span className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Pre-orders</span>
+              <div className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Pre-orders</div>
             </Link>
             <Link href="/about">
-              <span className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">About</span>
+              <div className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">About</div>
             </Link>
           </nav>
 
