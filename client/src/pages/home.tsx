@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { products } from "@/lib/products";
-import heroImage from "@assets/generated_images/dark_anime_swordsman_hero_background.png";
+import heroImage from "@assets/generated_images/close-up_anime_swordsman_hero_backgr_b45c2642.png";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
