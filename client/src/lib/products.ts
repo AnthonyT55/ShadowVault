@@ -15,7 +15,7 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    name: "Abyssal Ronin - Limited Edition",
+    name: "Abyssal Phantom - Limited Edition",
     price: 149.99,
     image: product1,
     category: "Premium Scale",
@@ -23,14 +23,14 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: "Cursed Blade: Kuro",
+    name: "Cursed Soul: Void",
     price: 89.99,
     image: product2,
     category: "Standard Series",
   },
   {
     id: 3,
-    name: "Shadow Stalker V2",
+    name: "Shadow Reaper V2",
     price: 129.99,
     image: product3,
     category: "Premium Scale",
@@ -38,7 +38,7 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: "Crimson Moon Samurai",
+    name: "Nightmare Harbinger",
     price: 199.99,
     image: product4,
     category: "Masterpiece",

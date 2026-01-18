@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { products } from "@/lib/products";
 import heroImage from "@assets/generated_images/dark_anime_swordsman_hero_background.png";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -29,11 +29,11 @@ export default function Home() {
             </span>
             <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-tight mb-6 text-glow">
               Embrace the <br/>
-              <span className="text-primary">Darkness</span>
+              <span className="text-primary">Void</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-lg leading-relaxed font-light">
               Discover premium limited-edition figures from the grittiest anime universes. 
-              Authentic. Detailed. Dangerous.
+              Authentic. Detailed. Mysterious.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-14 text-base tracking-widest uppercase font-semibold">
@@ -59,7 +59,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-end mb-12">
             <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-2">Featured Blades</h2>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-2">Featured Shadows</h2>
               <p className="text-muted-foreground">The most sought-after figures this month.</p>
             </div>
             <Link href="/shop">
@@ -103,11 +103,6 @@ export default function Home() {
                   </h3>
                   <div className="flex items-center justify-between mt-4">
                     <span className="text-white font-bold">${product.price}</span>
-                    <div className="flex text-primary/60 gap-0.5">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-3 h-3 fill-current" />
-                      ))}
-                    </div>
                   </div>
                 </div>
               </div>

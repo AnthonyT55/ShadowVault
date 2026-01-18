@@ -1,7 +1,6 @@
 import { Layout } from "@/components/layout";
 import { products } from "@/lib/products";
 import { Button } from "@/components/ui/button";
-import { Star } from "lucide-react";
 
 export default function Shop() {
   return (
@@ -43,11 +42,6 @@ export default function Shop() {
                   </h3>
                   <div className="flex items-center justify-between mt-4">
                     <span className="text-white font-bold">${product.price}</span>
-                    <div className="flex text-primary/60 gap-0.5">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-3 h-3 fill-current" />
-                      ))}
-                    </div>
                   </div>
                 </div>
               </div>
