@@ -22,10 +22,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="/"><a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Home</a></Link>
-            <Link href="/shop"><a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Shop</a></Link>
-            <Link href="/preorders"><a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Pre-orders</a></Link>
-            <Link href="/about"><a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">About</a></Link>
+            <Link href="/">
+              <a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Home</a>
+            </Link>
+            <Link href="/shop">
+              <a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Shop</a>
+            </Link>
+            <Link href="/preorders">
+              <a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Pre-orders</a>
+            </Link>
+            <Link href="/about">
+              <a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">About</a>
+            </Link>
           </nav>
 
           {/* Icons */}
