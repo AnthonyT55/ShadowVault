@@ -29,7 +29,7 @@ export default function Home() {
             </span>
             <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-tight mb-6 text-glow">
               For those who like their <br/>
-              <span className="text-primary">heros cursed</span>
+              heros <span className="text-primary">cursed</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-lg leading-relaxed font-light">
               Discover premium limited-edition figures from the grittiest anime universes. 
