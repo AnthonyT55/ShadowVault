@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "wouter";
 import { ShoppingCart, Search, Menu, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -27,12 +28,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </Link>
             <Link href="/shop">
               <a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Shop</a>
-            </Link>
-            <Link href="/preorders">
-              <a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Pre-orders</a>
-            </Link>
-            <Link href="/about">
-              <a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">About</a>
             </Link>
           </nav>
 
