@@ -32,8 +32,7 @@ export default function Home() {
               <span className="text-primary">Void</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-lg leading-relaxed font-light">
-              Discover premium limited-edition figures from the grittiest anime universes. 
-              Authentic. Detailed. Mysterious.
+              For those who like their heros cursed. Discover premium limited-edition figures from the grittiest anime universes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-14 text-base tracking-widest uppercase font-semibold">
