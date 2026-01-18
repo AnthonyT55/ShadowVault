@@ -16,7 +16,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           {/* Logo */}
           <Link href="/">
             <a className="text-2xl font-heading font-bold tracking-widest uppercase hover:text-primary transition-colors duration-300">
-              Shadow<span className="text-primary">Blade</span>
+              Cursed<span className="text-primary">Vault</span>
             </a>
           </Link>
 
@@ -53,7 +53,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <footer className="border-t border-white/5 bg-black py-16">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-4">
-            <h3 className="font-heading text-xl font-bold uppercase tracking-widest text-primary">ShadowBlade</h3>
+            <h3 className="font-heading text-xl font-bold uppercase tracking-widest text-primary">CursedVault</h3>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               Forged in darkness. We curate the finest anime action figures for the discerning collector.
             </p>
@@ -97,7 +97,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         <div className="container mx-auto px-4 mt-16 pt-8 border-t border-white/5 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} ShadowBlade Store. All rights reserved.
+          © {new Date().getFullYear()} Cursed Vault Store. All rights reserved.
         </div>
       </footer>
     </div>
