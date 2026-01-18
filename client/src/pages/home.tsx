@@ -29,7 +29,7 @@ export default function Home() {
             </span>
             <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-tight mb-6 text-glow">
               For those who like their <br/>
-              heroes <span className="text-primary">cursed</span>
+              heros <span className="text-primary">cursed</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-lg leading-relaxed font-light">
               We sell premium figures that embody the shadows. This is built for the collector who appreciates the curse.
