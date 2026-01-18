@@ -28,11 +28,12 @@ export default function Home() {
               New Collection Drop
             </span>
             <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-tight mb-6 text-glow">
-              Embrace the <br/>
-              <span className="text-primary">Void</span>
+              For those who like their <br/>
+              <span className="text-primary">heros cursed</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-lg leading-relaxed font-light">
-              For those who like their heros cursed. Discover premium limited-edition figures from the grittiest anime universes.
+              Discover premium limited-edition figures from the grittiest anime universes. 
+              Authentic. Detailed. Mysterious.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-14 text-base tracking-widest uppercase font-semibold">
