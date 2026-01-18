@@ -15,24 +15,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Logo */}
           <Link href="/">
-            <a className="text-2xl font-heading font-bold tracking-widest uppercase hover:text-primary transition-colors duration-300">
+            <span className="text-2xl font-heading font-bold tracking-widest uppercase hover:text-primary transition-colors duration-300 cursor-pointer">
               Cursed<span className="text-primary">Vault</span>
-            </a>
+            </span>
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             <Link href="/">
-              <a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Home</a>
+              <span className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Home</span>
             </Link>
             <Link href="/shop">
-              <a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Shop</a>
+              <span className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Shop</span>
             </Link>
             <Link href="/preorders">
-              <a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Pre-orders</a>
+              <span className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Pre-orders</span>
             </Link>
             <Link href="/about">
-              <a className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">About</a>
+              <span className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">About</span>
             </Link>
           </nav>
 
