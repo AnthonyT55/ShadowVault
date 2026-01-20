@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Zap, Mail } from "lucide-react";
+import { Link } from "wouter";
 
 export default function EarlyAccess() {
   return (
@@ -52,9 +53,11 @@ export default function EarlyAccess() {
                 <span>Receive your digital key and start accessing restricted collection drops.</span>
               </li>
             </ul>
-            <Button className="bg-primary hover:bg-primary/90 text-white rounded-none px-12 py-6 uppercase tracking-widest font-bold">
-              Shop to Qualify
-            </Button>
+            <Link href="/shop">
+              <Button className="bg-primary hover:bg-primary/90 text-white rounded-none px-12 py-6 uppercase tracking-widest font-bold cursor-pointer">
+                Shop to Qualify
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
