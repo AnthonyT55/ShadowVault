@@ -32,7 +32,7 @@ export default function Home() {
               become <span className="text-primary">centerpieces</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-lg leading-relaxed font-light">
-              We sell premium figures that embody the shadows. This is built for the collector who appreciates the curse.
+              Curated anime figures inspired by darker, overlooked legends. Imported from Japan and shipped free from the U.S.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-14 text-base tracking-widest uppercase font-semibold">
