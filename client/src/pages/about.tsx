@@ -24,6 +24,9 @@ export default function About() {
                 We source our products directly from Japan so you don't have to go through the hassle of converting USD to Yen. 
                 No more confusing exchange rates or international transaction fees.
               </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Unlike other stores, <span className="text-white font-bold italic">we are not dropshippers</span>. We maintain a physical stock in our U.S. facility, ensuring that every figure is hand-inspected and shipped directly to you with no international delays.
+              </p>
               <div className="flex items-center gap-4 p-4 bg-primary/5 border border-primary/20">
                 <Globe className="w-8 h-8 text-primary shrink-0" />
                 <span className="text-white font-display uppercase text-sm tracking-wider">Direct Japanese Sourcing</span>
