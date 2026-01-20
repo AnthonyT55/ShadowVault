@@ -9,6 +9,7 @@ import Shop from "@/pages/shop";
 
 import FAQ from "@/pages/faq";
 import Reviews from "@/pages/reviews";
+import EarlyAccess from "@/pages/early-access";
 
 function Router() {
   return (
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/shop" component={Shop} />
       <Route path="/faq" component={FAQ} />
       <Route path="/reviews" component={Reviews} />
+      <Route path="/early-access" component={EarlyAccess} />
       <Route component={NotFound} />
     </Switch>
   );

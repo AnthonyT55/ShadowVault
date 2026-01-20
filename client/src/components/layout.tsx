@@ -26,10 +26,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <div className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Home</div>
             </Link>
             <Link href="/shop">
-              <div className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Shop</div>
+              <div className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Enter the Vault</div>
             </Link>
-            <Link href="/preorders">
-              <div className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Pre-orders</div>
+            <Link href="/early-access">
+              <div className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Early Access</div>
             </Link>
             <Link href="/about">
               <div className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">About</div>
@@ -74,6 +74,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <li><Link href="/shop"><span className="hover:text-primary transition-colors cursor-pointer">Best Sellers</span></Link></li>
               <li><Link href="/shop"><span className="hover:text-primary transition-colors cursor-pointer">Limited Editions</span></Link></li>
               <li><Link href="/reviews"><span className="hover:text-primary transition-colors cursor-pointer">Collector Reviews</span></Link></li>
+              <li><Link href="/early-access"><span className="hover:text-primary transition-colors cursor-pointer text-primary font-bold">Early Access</span></Link></li>
             </ul>
           </div>
 

@@ -37,7 +37,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/shop">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-14 text-base tracking-widest uppercase font-semibold w-full sm:w-auto cursor-pointer">
-                  Enter the Vault
+                  Step into the shadows
                 </Button>
               </Link>
               <Link href="/reviews">
