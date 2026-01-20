@@ -21,18 +21,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-10">
             <Link href="/">
-              <div className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Home</div>
+              <div className="text-[11px] font-bold hover:text-primary transition-colors uppercase tracking-[0.2em] cursor-pointer">Home</div>
             </Link>
             <Link href="/shop">
-              <div className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Enter the Vault</div>
+              <div className="text-[11px] font-bold hover:text-primary transition-colors uppercase tracking-[0.2em] cursor-pointer">Enter the Vault</div>
             </Link>
             <Link href="/early-access">
-              <div className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">Early Access</div>
+              <div className="text-[11px] font-bold hover:text-primary transition-colors uppercase tracking-[0.2em] cursor-pointer">Early Access</div>
             </Link>
             <Link href="/about">
-              <div className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider cursor-pointer">About</div>
+              <div className="text-[11px] font-bold hover:text-primary transition-colors uppercase tracking-[0.2em] cursor-pointer">About</div>
             </Link>
           </nav>
 
@@ -58,18 +58,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-white/5 bg-black py-16">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="space-y-4">
-            <h3 className="font-heading text-xl font-bold uppercase tracking-widest text-primary">CursedVault</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
+      <footer className="border-t border-white/5 bg-black py-10 mt-auto">
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="space-y-3">
+            <h3 className="font-heading text-lg font-bold uppercase tracking-widest text-primary">CursedVault</h3>
+            <p className="text-muted-foreground text-xs leading-relaxed max-w-xs">
               Forged in darkness. We curate the finest anime action figures for the discerning collector.
             </p>
           </div>
           
           <div>
-            <h4 className="font-display font-semibold uppercase tracking-wider mb-6 text-white">Collections</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
+            <h4 className="font-display font-semibold uppercase tracking-wider mb-4 text-white text-xs">Collections</h4>
+            <ul className="space-y-2 text-[11px] text-muted-foreground">
               <li><Link href="/shop"><span className="hover:text-primary transition-colors cursor-pointer">New Arrivals</span></Link></li>
               <li><Link href="/shop"><span className="hover:text-primary transition-colors cursor-pointer">Best Sellers</span></Link></li>
               <li><Link href="/shop"><span className="hover:text-primary transition-colors cursor-pointer">Limited Editions</span></Link></li>
@@ -79,8 +79,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold uppercase tracking-wider mb-6 text-white">Support</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
+            <h4 className="font-display font-semibold uppercase tracking-wider mb-4 text-white text-xs">Support</h4>
+            <ul className="space-y-2 text-[11px] text-muted-foreground">
               <li><Link href="/faq"><span className="hover:text-primary transition-colors cursor-pointer">Shipping Policy</span></Link></li>
               <li><Link href="/faq"><span className="hover:text-primary transition-colors cursor-pointer">Returns & Exchanges</span></Link></li>
               <li><Link href="/faq"><span className="hover:text-primary transition-colors cursor-pointer">FAQ</span></Link></li>
@@ -89,24 +89,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold uppercase tracking-wider mb-6 text-white">Newsletter</h4>
+            <h4 className="font-display font-semibold uppercase tracking-wider mb-4 text-white text-xs">Newsletter</h4>
             <div className="flex gap-2">
               <input 
                 type="email" 
-                placeholder="Enter your email" 
-                className="bg-white/5 border border-white/10 px-4 py-2 text-sm w-full focus:outline-none focus:border-primary transition-colors"
+                placeholder="Enter email" 
+                className="bg-white/5 border border-white/10 px-3 py-1.5 text-xs w-full focus:outline-none focus:border-primary transition-colors"
               />
-              <Button variant="default" className="rounded-none bg-primary hover:bg-primary/90">
+              <Button variant="default" className="rounded-none bg-primary hover:bg-primary/90 text-[10px] px-3 h-8">
                 Join
               </Button>
             </div>
-            <p className="text-xs text-muted-foreground mt-4">
-              Subscribe to get notified about limited drops.
-            </p>
           </div>
         </div>
-        <div className="container mx-auto px-4 mt-16 pt-8 border-t border-white/5 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Cursed Vault Store. All rights reserved.
+        <div className="container mx-auto px-4 mt-8 pt-6 border-t border-white/5 text-center text-[10px] text-muted-foreground">
+          © {new Date().getFullYear()} Cursed Vault Store.
         </div>
       </footer>
     </div>
