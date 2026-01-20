@@ -70,20 +70,20 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <h4 className="font-display font-semibold uppercase tracking-wider mb-6 text-white">Collections</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">New Arrivals</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Best Sellers</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Pre-orders</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Limited Editions</a></li>
+              <li><Link href="/shop"><span className="hover:text-primary transition-colors cursor-pointer">New Arrivals</span></Link></li>
+              <li><Link href="/shop"><span className="hover:text-primary transition-colors cursor-pointer">Best Sellers</span></Link></li>
+              <li><Link href="/shop"><span className="hover:text-primary transition-colors cursor-pointer">Limited Editions</span></Link></li>
+              <li><Link href="/reviews"><span className="hover:text-primary transition-colors cursor-pointer">Collector Reviews</span></Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-display font-semibold uppercase tracking-wider mb-6 text-white">Support</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Shipping Policy</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Returns & Exchanges</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Contact Us</a></li>
+              <li><Link href="/faq"><span className="hover:text-primary transition-colors cursor-pointer">Shipping Policy</span></Link></li>
+              <li><Link href="/faq"><span className="hover:text-primary transition-colors cursor-pointer">Returns & Exchanges</span></Link></li>
+              <li><Link href="/faq"><span className="hover:text-primary transition-colors cursor-pointer">FAQ</span></Link></li>
+              <li><Link href="/faq"><span className="hover:text-primary transition-colors cursor-pointer">Contact Us</span></Link></li>
             </ul>
           </div>
 

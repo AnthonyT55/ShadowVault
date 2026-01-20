@@ -8,7 +8,7 @@ import { Link } from "wouter";
 export default function Home() {
   return (
     <Layout>
-      {/* Hero Section */}
+      {/* Hero Section - LANDING ONLY */}
       <section className="relative h-[90vh] w-full overflow-hidden flex items-center">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
@@ -35,12 +35,16 @@ export default function Home() {
               Curated anime figures inspired by darker, overlooked legends. Imported from Japan and shipped free from the U.S.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-14 text-base tracking-widest uppercase font-semibold">
-                Shop Collection
-              </Button>
-              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/5 hover:text-white rounded-none px-8 h-14 text-base tracking-widest uppercase bg-transparent backdrop-blur-sm">
-                View Gallery
-              </Button>
+              <Link href="/shop">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-14 text-base tracking-widest uppercase font-semibold w-full sm:w-auto cursor-pointer">
+                  Enter the Vault
+                </Button>
+              </Link>
+              <Link href="/reviews">
+                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/5 hover:text-white rounded-none px-8 h-14 text-base tracking-widest uppercase bg-transparent backdrop-blur-sm w-full sm:w-auto cursor-pointer">
+                  Collector Feed
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -48,71 +52,6 @@ export default function Home() {
         {/* Scroll Indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-muted-foreground/50">
            <div className="w-[1px] h-16 bg-gradient-to-b from-transparent via-primary to-transparent mx-auto" />
-        </div>
-      </section>
-
-      {/* Featured Products */}
-      <section className="py-24 bg-background relative">
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-        
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-end mb-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-2">Featured Shadows</h2>
-              <p className="text-muted-foreground">The most sought-after figures this month.</p>
-            </div>
-            <Link href="/shop">
-              <a className="hidden md:flex items-center gap-2 text-primary hover:text-white transition-colors text-sm uppercase tracking-widest font-bold group">
-                View All <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {products.map((product) => (
-              <div key={product.id} className="group relative bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 overflow-hidden">
-                {product.isNew && (
-                  <div className="absolute top-3 left-3 z-20 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest">
-                    New Arrival
-                  </div>
-                )}
-                
-                {/* Image Container */}
-                <div className="aspect-[3/4] overflow-hidden relative bg-black/50">
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                  
-                  {/* Quick Add Button */}
-                  <div className="absolute bottom-0 inset-x-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <Button className="w-full bg-white text-black hover:bg-gray-200 rounded-none font-bold uppercase tracking-wider text-xs h-10">
-                      Add to Cart
-                    </Button>
-                  </div>
-                </div>
-
-                {/* Product Info */}
-                <div className="p-5">
-                  <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wider font-medium">{product.category}</p>
-                  <h3 className="text-white font-display text-lg font-medium leading-tight mb-2 group-hover:text-primary transition-colors">
-                    {product.name}
-                  </h3>
-                  <div className="flex items-center justify-between mt-4">
-                    <span className="text-white font-bold">${product.price}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="mt-12 text-center md:hidden">
-            <Button variant="outline" className="w-full border-white/10 text-white uppercase tracking-widest py-6">
-              View All Products
-            </Button>
-          </div>
         </div>
       </section>
 
