@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section - LANDING ONLY */}
-      <section className="relative h-[90vh] w-full overflow-hidden flex items-center">
+      <section className="relative min-h-[90vh] py-20 w-full overflow-hidden flex items-center">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -22,7 +22,7 @@ export default function Home() {
         </div>
 
         {/* Hero Content */}
-        <div className="container mx-auto px-4 relative z-10 pt-20">
+        <div className="container mx-auto px-4 relative z-10 pt-20 pb-12">
           <div className="max-w-2xl animate-in slide-in-from-left duration-1000 fade-in">
             <span className="inline-block py-1 px-3 border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-[0.2em] uppercase mb-6 backdrop-blur-sm">
               New Collection Drop
