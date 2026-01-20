@@ -10,6 +10,7 @@ import Shop from "@/pages/shop";
 import FAQ from "@/pages/faq";
 import Reviews from "@/pages/reviews";
 import EarlyAccess from "@/pages/early-access";
+import About from "@/pages/about";
 
 function Router() {
   return (
@@ -19,6 +20,7 @@ function Router() {
       <Route path="/faq" component={FAQ} />
       <Route path="/reviews" component={Reviews} />
       <Route path="/early-access" component={EarlyAccess} />
+      <Route path="/about" component={About} />
       <Route component={NotFound} />
     </Switch>
   );
