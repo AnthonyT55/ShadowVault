@@ -1,18 +1,24 @@
 import { Link } from "wouter";
-import { ShoppingCart, Search, Menu, User } from "lucide-react";
+import { ShoppingCart, Search, Menu, User, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/shop", label: "Enter the Vault" },
+    { href: "/early-access", label: "Early Access" },
+    { href: "/about", label: "About" },
+  ];
+
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground">
       {/* Navbar */}
       <header className="fixed top-0 w-full z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          {/* Mobile Menu */}
-          <Button variant="ghost" size="icon" className="md:hidden text-muted-foreground hover:text-primary">
-            <Menu className="h-6 w-6" />
-          </Button>
-
           {/* Logo */}
           <Link href="/">
             <div className="text-2xl font-heading font-bold tracking-widest uppercase hover:text-primary transition-colors duration-300 cursor-pointer">
@@ -20,23 +26,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-10">
-            <Link href="/">
-              <div className="text-[11px] font-bold hover:text-primary transition-colors uppercase tracking-[0.2em] cursor-pointer">Home</div>
-            </Link>
-            <Link href="/shop">
-              <div className="text-[11px] font-bold hover:text-primary transition-colors uppercase tracking-[0.2em] cursor-pointer">Enter the Vault</div>
-            </Link>
-            <Link href="/early-access">
-              <div className="text-[11px] font-bold hover:text-primary transition-colors uppercase tracking-[0.2em] cursor-pointer">Early Access</div>
-            </Link>
-            <Link href="/about">
-              <div className="text-[11px] font-bold hover:text-primary transition-colors uppercase tracking-[0.2em] cursor-pointer">About</div>
-            </Link>
-          </nav>
-
-          {/* Icons */}
+          {/* Icons & Menu Toggle */}
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary hover:bg-transparent">
               <Search className="h-5 w-5" />
@@ -48,6 +38,30 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <ShoppingCart className="h-5 w-5" />
               <span className="absolute top-2 right-2 h-2 w-2 bg-primary rounded-full animate-pulse" />
             </Button>
+
+            {/* Hamburger Menu */}
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary hover:bg-transparent">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] bg-background border-white/10 p-10 flex flex-col justify-center">
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+                <nav className="flex flex-col gap-8">
+                  {navLinks.map((link) => (
+                    <Link key={link.href} href={link.href}>
+                      <div 
+                        onClick={() => setIsOpen(false)}
+                        className="text-2xl font-heading font-bold uppercase tracking-[0.2em] text-white hover:text-primary transition-colors cursor-pointer"
+                      >
+                        {link.label}
+                      </div>
+                    </Link>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </header>
