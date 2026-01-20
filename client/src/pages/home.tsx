@@ -55,6 +55,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Benefits Section */}
+      <section className="py-20 border-t border-white/5 bg-secondary/10">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div className="space-y-4 animate-in fade-in slide-in-from-bottom duration-700">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+              <h3 className="text-white font-heading font-bold text-lg uppercase tracking-wider">Fast, Free Shipping</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Free domestic shipping across the U.S. on all orders. Secured and tracked from our warehouse to your vault.
+              </p>
+            </div>
+            
+            <div className="space-y-4 animate-in fade-in slide-in-from-bottom duration-700 delay-100">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3 className="text-white font-heading font-bold text-lg uppercase tracking-wider">Authentic Imports</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Premium action figures sourced directly from Japan. 100% authentic licensed products only.
+              </p>
+            </div>
+
+            <div className="space-y-4 animate-in fade-in slide-in-from-bottom duration-700 delay-200">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <h3 className="text-white font-heading font-bold text-lg uppercase tracking-wider">Reserve Access</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Pre-orders available exclusively to Vault Reserve members. Secure your legends before they drop.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
