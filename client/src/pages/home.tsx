@@ -42,7 +42,7 @@ export default function Home() {
               </Link>
               <Link href="/reviews">
                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/5 hover:text-white rounded-none px-8 h-14 text-base tracking-widest uppercase bg-transparent backdrop-blur-sm w-full sm:w-auto cursor-pointer">
-                  Collector Feed
+                  Reviews
                 </Button>
               </Link>
             </div>
@@ -55,34 +55,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust/Features Section */}
-      <section className="py-20 border-t border-white/5 bg-secondary/20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
-            <div className="px-4 py-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <h3 className="text-white font-heading font-bold text-lg mb-2 uppercase">Authentic Guarantee</h3>
-              <p className="text-muted-foreground text-sm max-w-xs mx-auto">Every figure is verified authentic. No bootlegs, ever.</p>
-            </div>
-            <div className="px-4 py-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-              </div>
-              <h3 className="text-white font-heading font-bold text-lg mb-2 uppercase">Secure Shipping</h3>
-              <p className="text-muted-foreground text-sm max-w-xs mx-auto">Reinforced packaging to ensure your collector's item arrives pristine.</p>
-            </div>
-            <div className="px-4 py-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              </div>
-              <h3 className="text-white font-heading font-bold text-lg mb-2 uppercase">Pre-order Priority</h3>
-              <p className="text-muted-foreground text-sm max-w-xs mx-auto">Get first access to limited runs and exclusive drops.</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 }
