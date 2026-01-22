@@ -10,32 +10,32 @@
   --font-heading: 'Cinzel', serif;
   --font-display: 'Oswald', sans-serif;
 
-  --color-background: hsl(0 0% 5%);
-  --color-foreground: hsl(0 0% 95%);
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(0 0% 5%);
 
-  --color-card: hsl(0 0% 8%);
-  --color-card-foreground: hsl(0 0% 95%);
+  --color-card: hsl(0 0% 98%);
+  --color-card-foreground: hsl(0 0% 5%);
 
-  --color-popover: hsl(0 0% 8%);
-  --color-popover-foreground: hsl(0 0% 95%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(0 0% 5%);
 
   --color-primary: hsl(270 72% 51%); /* Deep Purple */
   --color-primary-foreground: hsl(0 0% 100%);
 
-  --color-secondary: hsl(0 0% 15%);
-  --color-secondary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(0 0% 95%);
+  --color-secondary-foreground: hsl(0 0% 5%);
 
-  --color-muted: hsl(0 0% 15%);
-  --color-muted-foreground: hsl(0 0% 60%);
+  --color-muted: hsl(0 0% 95%);
+  --color-muted-foreground: hsl(0 0% 40%);
 
-  --color-accent: hsl(0 0% 15%);
-  --color-accent-foreground: hsl(0 0% 100%);
+  --color-accent: hsl(0 0% 95%);
+  --color-accent-foreground: hsl(0 0% 5%);
 
-  --color-destructive: hsl(0 62% 30%);
+  --color-destructive: hsl(0 84% 60%);
   --color-destructive-foreground: hsl(0 0% 100%);
 
-  --color-border: hsl(0 0% 20%);
-  --color-input: hsl(0 0% 20%);
+  --color-border: hsl(0 0% 90%);
+  --color-input: hsl(0 0% 90%);
   --color-ring: hsl(270 72% 51%);
 
   --radius: 0rem; /* Sharp edges for edgy feel */
@@ -47,23 +47,23 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(0 0% 5%);
+  background: hsl(0 0% 95%);
 }
 
 ::-webkit-scrollbar-thumb {
   background: hsl(270 72% 51%);
-  border: 3px solid hsl(0 0% 5%);
+  border: 3px solid hsl(0 0% 95%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(270 72% 61%);
+  background: hsl(270 72% 41%);
 }
 
 @layer base {
   * {
     @apply border-border;
     scrollbar-width: thin;
-    scrollbar-color: hsl(270 72% 51%) hsl(0 0% 5%);
+    scrollbar-color: hsl(270 72% 51%) hsl(0 0% 95%);
   }
   body {
     @apply font-sans antialiased bg-background text-foreground min-h-screen;
@@ -80,9 +80,34 @@
   }
   
   .bg-grid-pattern {
-    background-image: linear-gradient(to right, #222 1px, transparent 1px),
-    linear-gradient(to bottom, #222 1px, transparent 1px);
+    background-image: linear-gradient(to right, #e5e5e5 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e5e5 1px, transparent 1px);
     background-size: 40px 40px;
     mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  }
+
+  @keyframes fly-crow {
+    0% {
+      transform: translate(-100px, 100vh) rotate(20deg) scale(0.5);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(120vw, -20vh) rotate(20deg) scale(1.5);
+      opacity: 0;
+    }
+  }
+
+  .crow-animation {
+    position: fixed;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0;
+    animation: fly-crow 6s ease-in forwards;
   }
 }
