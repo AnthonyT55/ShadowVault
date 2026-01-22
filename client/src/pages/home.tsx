@@ -36,8 +36,8 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10 pt-20 pb-12">
           <div className="max-w-4xl animate-in slide-in-from-left duration-1000 fade-in">
             {/* Animated Brand Name */}
-            <div className={`transition-all duration-700 mb-4 ${isScrolled ? 'opacity-0 -translate-y-20' : 'opacity-100 translate-y-0'}`}>
-              <span className="text-2xl md:text-3xl font-heading font-bold tracking-[0.5em] uppercase text-white">
+            <div className={`transition-all duration-700 mb-8 ${isScrolled ? 'opacity-0 -translate-y-20' : 'opacity-100 translate-y-0'}`}>
+              <span className="text-7xl md:text-9xl font-heading font-black tracking-[0.2em] uppercase text-white leading-none block">
                 Shadow<span className="text-primary italic">Vault</span>
               </span>
             </div>
@@ -45,7 +45,7 @@ export default function Home() {
             <span className="inline-block py-1 px-3 border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-[0.2em] uppercase mb-6 backdrop-blur-sm">
               New Collection Drop
             </span>
-            <h1 className="text-5xl md:text-7xl font-heading font-black text-white leading-tight mb-8 text-glow uppercase tracking-tighter">
+            <h1 className="text-4xl md:text-6xl font-heading font-black text-white leading-tight mb-8 text-glow uppercase tracking-tighter">
               Where <span className="text-primary italic">side</span> characters <br/>
               become <span className="text-primary italic">centerpieces</span>
             </h1>
