@@ -1,15 +1,57 @@
 import { Layout } from "@/components/layout";
-import { products } from "@/lib/products";
+import { products, type Product } from "@/lib/products";
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
+import { 
+  Select, 
+  SelectContent, 
+  SelectItem, 
+  SelectTrigger, 
+  SelectValue 
+} from "@/components/ui/select";
 
 export default function Shop() {
+  const [sortBy, setSortBy] = useState<string>("featured");
+
+  const sortedProducts = useMemo(() => {
+    const list = [...products];
+    switch (sortBy) {
+      case "price-low":
+        return list.sort((a, b) => a.price - b.price);
+      case "price-high":
+        return list.sort((a, b) => b.price - a.price);
+      case "newest":
+        // Mocking date sort with ID for now as products don't have dates
+        return list.sort((a, b) => b.id - a.id);
+      default:
+        return list;
+    }
+  }, [sortBy]);
+
   return (
     <Layout>
       <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-heading font-bold text-white mb-8">All Products</h1>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+          <h1 className="text-4xl font-heading font-bold text-white uppercase tracking-widest text-glow">The <span className="text-primary italic">Vault</span></h1>
+          
+          <div className="flex items-center gap-4 w-full md:w-auto">
+            <span className="text-xs uppercase tracking-widest font-bold text-muted-foreground whitespace-nowrap">Sort By:</span>
+            <Select value={sortBy} onValueChange={setSortBy}>
+              <SelectTrigger className="w-full md:w-[200px] rounded-none bg-card border-white/10 text-white focus:ring-primary uppercase text-[10px] tracking-widest h-10">
+                <SelectValue placeholder="Sort by" />
+              </SelectTrigger>
+              <SelectContent className="bg-card border-white/10 text-white rounded-none">
+                <SelectItem value="featured" className="uppercase text-[10px] tracking-widest focus:bg-primary focus:text-white cursor-pointer">Featured</SelectItem>
+                <SelectItem value="price-low" className="uppercase text-[10px] tracking-widest focus:bg-primary focus:text-white cursor-pointer">Price: Low to High</SelectItem>
+                <SelectItem value="price-high" className="uppercase text-[10px] tracking-widest focus:bg-primary focus:text-white cursor-pointer">Price: High to Low</SelectItem>
+                <SelectItem value="newest" className="uppercase text-[10px] tracking-widest focus:bg-primary focus:text-white cursor-pointer">Newest Arrivals</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {products.map((product) => (
+            {sortedProducts.map((product) => (
               <div key={product.id} className="group relative bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 overflow-hidden">
                 {product.isNew && (
                   <div className="absolute top-3 left-3 z-20 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest">
