@@ -4,8 +4,19 @@ import { products } from "@/lib/products";
 import heroImage from "@assets/generated_images/dark_anime_swordsman_hero_background.png";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <Layout>
       {/* Hero Section - LANDING ONLY */}
@@ -23,15 +34,22 @@ export default function Home() {
 
         {/* Hero Content */}
         <div className="container mx-auto px-4 relative z-10 pt-20 pb-12">
-          <div className="max-w-2xl animate-in slide-in-from-left duration-1000 fade-in">
+          <div className="max-w-4xl animate-in slide-in-from-left duration-1000 fade-in">
+            {/* Animated Brand Name */}
+            <div className={`transition-all duration-700 mb-4 ${isScrolled ? 'opacity-0 -translate-y-20' : 'opacity-100 translate-y-0'}`}>
+              <span className="text-2xl md:text-3xl font-heading font-bold tracking-[0.5em] uppercase text-white">
+                Shadow<span className="text-primary italic">Vault</span>
+              </span>
+            </div>
+
             <span className="inline-block py-1 px-3 border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-[0.2em] uppercase mb-6 backdrop-blur-sm">
               New Collection Drop
             </span>
-            <h1 className="text-6xl md:text-9xl font-heading font-black text-white leading-tight mb-8 text-glow uppercase tracking-tighter">
+            <h1 className="text-5xl md:text-7xl font-heading font-black text-white leading-tight mb-8 text-glow uppercase tracking-tighter">
               Where <span className="text-primary italic">side</span> characters <br/>
               become <span className="text-primary italic">centerpieces</span>
             </h1>
-            <p className="text-xl md:text-3xl text-gray-300 mb-12 max-w-3xl leading-tight font-light tracking-wide">
+            <p className="text-lg md:text-2xl text-gray-300 mb-12 max-w-2xl leading-tight font-light tracking-wide">
               Curated anime figures inspired by darker, overlooked legends. Imported from Japan and shipped free from the U.S.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">

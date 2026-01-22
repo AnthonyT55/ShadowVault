@@ -7,11 +7,21 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 export function Layout({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [showCrows, setShowCrows] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     setShowCrows(true);
     const timer = setTimeout(() => setShowCrows(false), 8000);
-    return () => clearTimeout(timer);
+    
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const navLinks = [
@@ -46,10 +56,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
       {/* Navbar */}
       <header className="fixed top-0 w-full z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo - Controlled by scroll state */}
           <Link href="/">
-            <div className="text-2xl font-heading font-bold tracking-widest uppercase hover:text-primary transition-colors duration-300 cursor-pointer text-white">
-              Cursed<span className="text-primary">Vault</span>
+            <div className={`text-2xl font-heading font-bold tracking-widest uppercase hover:text-primary transition-all duration-500 cursor-pointer text-white ${isScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+              Shadow<span className="text-primary">Vault</span>
             </div>
           </Link>
 
@@ -99,7 +109,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <footer className="border-t border-white/5 bg-black py-10 mt-auto">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-3">
-            <h3 className="font-heading text-lg font-bold uppercase tracking-widest text-primary">CursedVault</h3>
+            <h3 className="font-heading text-lg font-bold uppercase tracking-widest text-primary">ShadowVault</h3>
             <p className="text-muted-foreground text-xs leading-relaxed max-w-xs">
               Forged in darkness. We curate the finest anime action figures for the discerning collector.
             </p>
@@ -141,7 +151,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         <div className="container mx-auto px-4 mt-8 pt-6 border-t border-white/5 text-center text-[10px] text-muted-foreground">
-          © {new Date().getFullYear()} Cursed Vault Store.
+          © {new Date().getFullYear()} Shadow Vault Store.
         </div>
       </footer>
     </div>
