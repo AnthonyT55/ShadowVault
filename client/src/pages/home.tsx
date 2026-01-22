@@ -35,13 +35,6 @@ export default function Home() {
         {/* Hero Content */}
         <div className="container mx-auto px-4 relative z-10 pt-20 pb-12">
           <div className="max-w-4xl animate-in slide-in-from-left duration-1000 fade-in">
-            {/* Animated Brand Name */}
-            <div className={`transition-all duration-700 mb-4 ${isScrolled ? 'opacity-0 -translate-y-20' : 'opacity-100 translate-y-0'}`}>
-              <span className="text-2xl md:text-3xl font-heading font-bold tracking-[0.5em] uppercase text-white">
-                Shadow<span className="text-primary italic">Vault</span>
-              </span>
-            </div>
-
             <span className="inline-block py-1 px-3 border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-[0.2em] uppercase mb-6 backdrop-blur-sm">
               New Collection Drop
             </span>
@@ -49,17 +42,17 @@ export default function Home() {
               Where <span className="text-primary italic">side</span> characters <br/>
               become <span className="text-primary italic">centerpieces</span>
             </h1>
-            <p className="text-lg md:text-2xl text-gray-300 mb-12 max-w-2xl leading-tight font-light tracking-wide">
+            <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed font-light tracking-wide">
               Curated anime figures inspired by darker, overlooked legends. Imported from Japan and shipped free from the U.S.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/shop">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-12 h-20 text-xl tracking-[0.2em] uppercase font-black w-full sm:w-auto cursor-pointer border-2 border-primary transition-all hover:scale-105">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-16 text-lg tracking-[0.2em] uppercase font-black w-full sm:w-auto cursor-pointer border-2 border-primary transition-all hover:scale-105">
                   Step into the shadows
                 </Button>
               </Link>
               <Link href="/reviews">
-                <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 hover:text-white rounded-none px-12 h-20 text-xl tracking-[0.2em] uppercase bg-transparent backdrop-blur-md w-full sm:w-auto cursor-pointer border-2 transition-all hover:scale-105">
+                <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 hover:text-white rounded-none px-8 h-16 text-lg tracking-[0.2em] uppercase bg-transparent backdrop-blur-md w-full sm:w-auto cursor-pointer border-2 transition-all hover:scale-105">
                   Reviews
                 </Button>
               </Link>

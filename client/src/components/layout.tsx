@@ -58,7 +58,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           {/* Logo - Controlled by scroll state */}
           <Link href="/">
-            <div className={`text-2xl font-heading font-bold tracking-widest uppercase hover:text-primary transition-all duration-500 cursor-pointer text-white ${isScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+            <div className="text-2xl font-heading font-bold tracking-widest uppercase hover:text-primary transition-all duration-300 cursor-pointer text-white">
               Shadow<span className="text-primary">Vault</span>
             </div>
           </Link>
