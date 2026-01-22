@@ -27,11 +27,11 @@ export default function Home() {
             <span className="inline-block py-1 px-3 border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-[0.2em] uppercase mb-6 backdrop-blur-sm">
               New Collection Drop
             </span>
-            <h1 className="text-5xl md:text-7xl font-heading font-bold text-black leading-tight mb-6">
+            <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-tight mb-6 text-glow">
               Where <span className="text-primary italic">side</span> characters <br/>
               become <span className="text-primary italic">centerpieces</span>
             </h1>
-            <p className="text-lg text-black/60 mb-8 max-w-lg leading-relaxed font-light">
+            <p className="text-lg text-gray-300 mb-8 max-w-lg leading-relaxed font-light">
               Curated anime figures inspired by darker, overlooked legends. Imported from Japan and shipped free from the U.S.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -41,7 +41,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/reviews">
-                <Button size="lg" variant="outline" className="border-black/20 text-black hover:bg-black/5 hover:text-black rounded-none px-8 h-14 text-base tracking-widest uppercase bg-transparent backdrop-blur-sm w-full sm:w-auto cursor-pointer">
+                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/5 hover:text-white rounded-none px-8 h-14 text-base tracking-widest uppercase bg-transparent backdrop-blur-sm w-full sm:w-auto cursor-pointer">
                   Reviews
                 </Button>
               </Link>
@@ -50,43 +50,43 @@ export default function Home() {
         </div>
         
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-black/30">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-muted-foreground/30">
            <div className="w-[1px] h-16 bg-gradient-to-b from-transparent via-primary to-transparent mx-auto" />
         </div>
       </section>
 
       {/* Previous Drop Section */}
-      <section className="py-24 bg-white border-t border-black/5">
+      <section className="py-20 bg-background border-t border-white/5">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
             <div className="max-w-xl">
-              <span className="text-primary text-xs font-bold tracking-[0.3em] uppercase block mb-4">Archive</span>
-              <h2 className="text-4xl md:text-5xl font-heading font-bold text-black uppercase leading-tight">
-                View Our <span className="text-primary italic">Last Drop</span>
+              <span className="text-primary text-xs font-bold tracking-[0.3em] uppercase block mb-3">Archive</span>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-white uppercase leading-tight">
+                <span className="text-primary italic">Last Drop</span>
               </h2>
             </div>
             <Link href="/shop">
-              <Button variant="link" className="text-black hover:text-primary p-0 h-auto font-bold uppercase tracking-widest text-xs flex items-center gap-2 group">
-                Shop Collection <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <Button variant="link" className="text-muted-foreground hover:text-primary p-0 h-auto font-bold uppercase tracking-widest text-[10px] flex items-center gap-2 group">
+                Shop Collection <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {products.slice(0, 4).map((product, index) => (
-              <div key={product.id} className="group cursor-pointer animate-in fade-in slide-in-from-bottom duration-700" style={{ animationDelay: `${index * 150}s` }}>
-                <div className="relative aspect-[3/4] overflow-hidden bg-gray-50 border border-black/5 mb-4">
+              <div key={product.id} className="group cursor-pointer animate-in fade-in slide-in-from-bottom duration-700" style={{ animationDelay: `${index * 100}ms` }}>
+                <div className="relative aspect-square overflow-hidden bg-card border border-white/5 mb-3">
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-black text-white text-[10px] px-2 py-1 uppercase tracking-tighter">Sold Out</span>
+                  <div className="absolute top-2 left-2">
+                    <span className="bg-black/80 backdrop-blur-sm text-white text-[9px] px-1.5 py-0.5 uppercase tracking-tighter border border-white/10">Sold Out</span>
                   </div>
                 </div>
-                <h3 className="text-black font-heading font-bold uppercase tracking-wider text-sm mb-1">{product.name}</h3>
-                <p className="text-primary font-display text-sm">${product.price}</p>
+                <h3 className="text-white font-heading font-bold uppercase tracking-wider text-[11px] mb-0.5 truncate">{product.name}</h3>
+                <p className="text-primary font-display text-xs">${product.price}</p>
               </div>
             ))}
           </div>
@@ -94,15 +94,15 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 border-t border-black/5 bg-gray-50">
+      <section className="py-20 border-t border-white/5 bg-secondary/20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
-            <div className="space-y-4 animate-in fade-in slide-in-from-bottom duration-700">
-              <div className="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center mx-auto text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div className="space-y-3 animate-in fade-in slide-in-from-bottom duration-700">
+              <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </div>
-              <h3 className="text-black font-heading font-bold text-lg uppercase tracking-wider">Fast, Free Shipping</h3>
-              <p className="text-black/60 text-sm leading-relaxed max-w-xs mx-auto">
+              <h3 className="text-white font-heading font-bold text-base uppercase tracking-wider">Fast, Free Shipping</h3>
+              <p className="text-muted-foreground text-xs leading-relaxed max-w-xs mx-auto">
                 Free domestic shipping across the U.S. on all orders. Secured and tracked from our warehouse to your vault.
               </p>
             </div>
