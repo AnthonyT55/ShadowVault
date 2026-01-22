@@ -60,30 +60,31 @@ export default function Shop() {
                 )}
                 
                 {/* Image Container */}
-                <div className="aspect-[3/4] overflow-hidden relative bg-black/50">
+                <div className="aspect-[3/4] overflow-hidden relative bg-black">
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-125 opacity-100 group-hover:brightness-110 group-hover:contrast-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity" />
                   
                   {/* Quick Add Button */}
-                  <div className="absolute bottom-0 inset-x-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <Button className="w-full bg-white text-black hover:bg-gray-200 rounded-none font-bold uppercase tracking-wider text-xs h-10">
-                      Add to Cart
+                  <div className="absolute bottom-0 inset-x-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                    <Button className="w-full bg-primary text-white hover:bg-primary/90 rounded-none font-black uppercase tracking-[0.2em] text-sm h-16 border-2 border-primary shadow-2xl">
+                      Add to Vault
                     </Button>
                   </div>
                 </div>
 
                 {/* Product Info */}
-                <div className="p-5">
-                  <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wider font-medium">{product.category}</p>
-                  <h3 className="text-white font-display text-lg font-medium leading-tight mb-2 group-hover:text-primary transition-colors">
+                <div className="p-8 bg-card/50 backdrop-blur-sm border-t border-white/5">
+                  <p className="text-sm text-primary mb-2 uppercase tracking-[0.3em] font-black">{product.category}</p>
+                  <h3 className="text-white font-heading text-3xl font-black leading-none mb-4 group-hover:text-primary transition-colors uppercase tracking-tighter">
                     {product.name}
                   </h3>
-                  <div className="flex items-center justify-between mt-4">
-                    <span className="text-white font-bold">${product.price}</span>
+                  <div className="flex items-center justify-between mt-6">
+                    <span className="text-3xl font-display font-black text-white tracking-tighter">${product.price}</span>
+                    <div className="h-[2px] flex-grow mx-4 bg-gradient-to-r from-primary to-transparent" />
                   </div>
                 </div>
               </div>
