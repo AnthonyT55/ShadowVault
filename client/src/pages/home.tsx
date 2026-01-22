@@ -67,7 +67,7 @@ export default function Home() {
       </section>
 
       {/* Previous Drop Section */}
-      <section className="py-20 bg-background border-t border-white/5">
+      <section className="py-20 relative z-10 bg-background/60 backdrop-blur-xl border-t border-white/5">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
             <div className="max-w-xl">
@@ -86,7 +86,7 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {products.slice(0, 4).map((product, index) => (
               <div key={product.id} className="group cursor-pointer animate-in fade-in slide-in-from-bottom duration-700" style={{ animationDelay: `${index * 100}ms` }}>
-                <div className="relative aspect-square overflow-hidden bg-card border border-white/5 mb-3">
+                <div className="relative aspect-square overflow-hidden bg-card/40 backdrop-blur-sm border border-white/5 mb-3">
                   <img 
                     src={product.image} 
                     alt={product.name}
@@ -105,7 +105,7 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 border-t border-white/5 bg-secondary/20">
+      <section className="py-20 relative z-10 border-t border-white/5 bg-secondary/40 backdrop-blur-lg">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <div className="space-y-3 animate-in fade-in slide-in-from-bottom duration-700">
