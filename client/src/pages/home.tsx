@@ -20,16 +20,16 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section - LANDING ONLY */}
-      <section className="relative h-screen min-h-[700px] w-full overflow-hidden flex items-center">
+      <section className="relative h-screen w-full overflow-hidden flex items-center bg-black">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
             src={heroImage} 
             alt="Dark Anime Swordsman" 
-            className="w-full h-full object-cover object-[center_20%] opacity-100 contrast-125 brightness-110"
+            className="w-full h-full object-contain object-center opacity-100"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent opacity-40" />
         </div>
 
         {/* Hero Content */}
