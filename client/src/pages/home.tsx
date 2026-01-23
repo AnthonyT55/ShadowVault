@@ -20,9 +20,9 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section - LANDING ONLY */}
-      <section className="relative min-h-[90vh] py-20 w-full overflow-hidden flex items-center">
+      <section className="relative h-screen min-h-[700px] w-full overflow-hidden flex items-center">
         {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0 scale-110">
+        <div className="absolute inset-0 z-0">
           <img 
             src={heroImage} 
             alt="Dark Anime Swordsman" 
@@ -38,24 +38,38 @@ export default function Home() {
             <span className="inline-block py-1 px-3 border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-[0.2em] uppercase mb-6 backdrop-blur-sm">
               New Collection Drop
             </span>
-            <h1 className="text-5xl md:text-7xl font-heading font-black text-white leading-tight mb-8 text-glow uppercase tracking-tighter">
-              Where <span className="text-primary italic">side</span> characters <br/>
-              become <span className="text-primary italic">centerpieces</span>
+            <h1 className="text-5xl md:text-7xl font-heading font-black text-white leading-tight mb-8 text-glow uppercase tracking-tighter flex flex-wrap gap-x-4">
+              {"Where side characters become centerpieces".split(" ").map((word, i) => (
+                <span 
+                  key={i} 
+                  className="inline-block animate-in fade-in slide-in-from-bottom duration-500 fill-mode-both"
+                  style={{ animationDelay: `${i * 150}ms` }}
+                >
+                  {word === "side" || word === "centerpieces" ? (
+                    <span className="text-primary italic">{word}</span>
+                  ) : word}
+                </span>
+              ))}
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed font-light tracking-wide">
-              Curated anime figures inspired by darker, overlooked legends. Imported from Japan and shipped free from the U.S.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/shop">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-16 text-lg tracking-[0.2em] uppercase font-black w-full sm:w-auto cursor-pointer border-2 border-primary transition-all hover:scale-105">
-                  Step into the shadows
-                </Button>
-              </Link>
-              <Link href="/reviews">
-                <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 hover:text-white rounded-none px-8 h-16 text-lg tracking-[0.2em] uppercase bg-transparent backdrop-blur-md w-full sm:w-auto cursor-pointer border-2 transition-all hover:scale-105">
-                  Reviews
-                </Button>
-              </Link>
+            <div 
+              className="animate-in fade-in slide-in-from-bottom duration-1000 fill-mode-both"
+              style={{ animationDelay: "1.2s" }}
+            >
+              <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed font-light tracking-wide">
+                Curated anime figures inspired by darker, overlooked legends. Imported from Japan and shipped free from the U.S.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/shop">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-16 text-lg tracking-[0.2em] uppercase font-black w-full sm:w-auto cursor-pointer border-2 border-primary transition-all hover:scale-105">
+                    Step into the shadows
+                  </Button>
+                </Link>
+                <Link href="/reviews">
+                  <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 hover:text-white rounded-none px-8 h-16 text-lg tracking-[0.2em] uppercase bg-transparent backdrop-blur-md w-full sm:w-auto cursor-pointer border-2 transition-all hover:scale-105">
+                    Reviews
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
