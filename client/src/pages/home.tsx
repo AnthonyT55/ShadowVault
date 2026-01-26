@@ -57,7 +57,7 @@ export default function Home() {
                   style={{ animationDelay: "1.2s" }}
                 >
                   <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed font-light tracking-wide">
-                    Curated anime figures inspired by darker, overlooked legends. Imported from Japan and shipped free from the U.S.
+                    Limited drops of hand selected, premium quality, and authentic anime action figures for the collector with darker tastes. Skip the wait. Skip the stress. Improve your anime figure collection this week, without having to pay for shipping.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link href="/shop">
