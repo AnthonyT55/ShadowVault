@@ -59,7 +59,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           {/* Logo - Controlled by scroll state */}
           <Link href="/">
             <div className="text-2xl font-heading font-bold tracking-widest uppercase hover:text-primary transition-all duration-300 cursor-pointer text-white">
-              Shadow<span className="text-primary">Vault</span>
+              Underground<span className="text-primary">Vault</span>
             </div>
           </Link>
 
@@ -109,7 +109,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <footer className="border-t border-white/5 bg-black py-10 mt-auto">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-3">
-            <h3 className="font-heading text-lg font-bold uppercase tracking-widest text-primary">ShadowVault</h3>
+            <h3 className="font-heading text-lg font-bold uppercase tracking-widest text-primary">UndergroundVault</h3>
             <p className="text-muted-foreground text-xs leading-relaxed max-w-xs">
               Forged in darkness. We curate the finest anime action figures for the discerning collector.
             </p>
@@ -151,7 +151,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         <div className="container mx-auto px-4 mt-8 pt-6 border-t border-white/5 text-center text-[10px] text-muted-foreground">
-          © {new Date().getFullYear()} Shadow Vault Store.
+          © {new Date().getFullYear()} Underground Vault Store.
         </div>
       </footer>
     </div>

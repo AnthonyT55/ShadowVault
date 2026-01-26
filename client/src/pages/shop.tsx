@@ -71,7 +71,7 @@ export default function Shop() {
                   {/* Quick Add Button */}
                   <div className="absolute bottom-0 inset-x-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
                     <Button className="w-full bg-primary text-white hover:bg-primary/90 rounded-none font-black uppercase tracking-[0.2em] text-sm h-16 border-2 border-primary shadow-2xl">
-                      Add to Vault
+                      Add to Cart
                     </Button>
                   </div>
                 </div>
