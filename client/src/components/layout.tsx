@@ -26,7 +26,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/shop", label: "Enter the Vault" },
+    { href: "#", label: "Enter the Vault" },
     { href: "/early-access", label: "Early Access" },
     { href: "/about", label: "About" },
   ];
@@ -65,14 +65,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Icons & Menu Toggle */}
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" className="hidden md:inline-flex text-white hover:text-primary hover:bg-transparent">
-              <User className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="text-white hover:text-primary hover:bg-transparent relative">
-              <ShoppingCart className="h-5 w-5" />
-              <span className="absolute top-2 right-2 h-2 w-2 bg-primary rounded-full animate-pulse" />
-            </Button>
-
             {/* Hamburger Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
@@ -107,7 +99,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Footer */}
       <footer className="border-t border-white/5 bg-black py-10 mt-auto">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-3">
             <h3 className="font-heading text-lg font-bold uppercase tracking-widest text-primary">UndergroundVault</h3>
             <p className="text-muted-foreground text-xs leading-relaxed max-w-xs">
@@ -116,17 +108,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
           
           <div>
-            <h4 className="font-display font-semibold uppercase tracking-wider mb-4 text-white text-xs">Collections</h4>
-            <ul className="space-y-2 text-[11px] text-muted-foreground">
-              <li><Link href="/shop"><span className="hover:text-primary transition-colors cursor-pointer">New Arrivals</span></Link></li>
-              <li><Link href="/shop"><span className="hover:text-primary transition-colors cursor-pointer">Best Sellers</span></Link></li>
-              <li><Link href="/shop"><span className="hover:text-primary transition-colors cursor-pointer">Limited Editions</span></Link></li>
-              <li><Link href="/reviews"><span className="hover:text-primary transition-colors cursor-pointer">Collector Reviews</span></Link></li>
-              <li><Link href="/early-access"><span className="hover:text-primary transition-colors cursor-pointer text-primary font-bold">Early Access</span></Link></li>
-            </ul>
-          </div>
-
-          <div>
             <h4 className="font-display font-semibold uppercase tracking-wider mb-4 text-white text-xs">Support</h4>
             <ul className="space-y-2 text-[11px] text-muted-foreground">
               <li><Link href="/faq"><span className="hover:text-primary transition-colors cursor-pointer">Shipping Policy</span></Link></li>
@@ -134,20 +115,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <li><Link href="/faq"><span className="hover:text-primary transition-colors cursor-pointer">FAQ</span></Link></li>
               <li><Link href="/faq"><span className="hover:text-primary transition-colors cursor-pointer">Contact Us</span></Link></li>
             </ul>
-          </div>
-
-          <div>
-            <h4 className="font-display font-semibold uppercase tracking-wider mb-4 text-white text-xs">Newsletter</h4>
-            <div className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Enter email" 
-                className="bg-white/5 border border-white/10 px-3 py-1.5 text-xs w-full focus:outline-none focus:border-primary transition-colors"
-              />
-              <Button variant="default" className="rounded-none bg-primary hover:bg-primary/90 text-[10px] px-3 h-8">
-                Join
-              </Button>
-            </div>
           </div>
         </div>
         <div className="container mx-auto px-4 mt-8 pt-6 border-t border-white/5 text-center text-[10px] text-muted-foreground">

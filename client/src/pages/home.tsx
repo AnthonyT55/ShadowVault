@@ -60,7 +60,7 @@ export default function Home() {
                     Limited drops of hand selected, premium quality, and authentic anime action figures for the collector with darker tastes. Skip the wait. Skip the stress. Improve your anime figure collection this week, without having to pay for shipping.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Link href="/shop">
+                    <Link href="#">
                       <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-16 text-lg tracking-[0.2em] uppercase font-black w-full sm:w-auto cursor-pointer border-2 border-primary transition-all hover:scale-105">
                         Step into the shadows
                       </Button>
@@ -93,7 +93,7 @@ export default function Home() {
                 <span className="text-primary italic">Last Drop</span>
               </h2>
             </div>
-            <Link href="/shop">
+            <Link href="#">
               <Button variant="link" className="text-muted-foreground hover:text-primary p-0 h-auto font-bold uppercase tracking-widest text-[10px] flex items-center gap-2 group">
                 Shop Collection <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
               </Button>
