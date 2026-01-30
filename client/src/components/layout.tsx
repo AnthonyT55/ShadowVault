@@ -26,7 +26,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "#", label: "Enter the Vault" },
+    { href: "https://shop.undergroundvault.store", label: "Enter the Vault" },
     { href: "/early-access", label: "Early Access" },
     { href: "/about", label: "About" },
   ];

@@ -60,11 +60,11 @@ export default function Home() {
                     Limited drops of hand selected, premium quality, and authentic anime action figures for the collector with darker tastes. Skip the wait. Skip the stress. Improve your anime figure collection this week, without having to pay for shipping.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Link href="#">
+                    <a href="https://shop.undergroundvault.store">
                       <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-16 text-lg tracking-[0.2em] uppercase font-black w-full sm:w-auto cursor-pointer border-2 border-primary transition-all hover:scale-105">
                         Step into the shadows
                       </Button>
-                    </Link>
+                    </a>
                     <Link href="/reviews">
                       <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 hover:text-white rounded-none px-8 h-16 text-lg tracking-[0.2em] uppercase bg-transparent backdrop-blur-md w-full sm:w-auto cursor-pointer border-2 transition-all hover:scale-105">
                         Reviews
@@ -93,16 +93,16 @@ export default function Home() {
                 <span className="text-primary italic">Last Drop</span>
               </h2>
             </div>
-            <Link href="#">
+            <a href="https://shop.undergroundvault.store">
               <Button variant="link" className="text-muted-foreground hover:text-primary p-0 h-auto font-bold uppercase tracking-widest text-[10px] flex items-center gap-2 group">
                 Shop Collection <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </Link>
+            </a>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {products.slice(0, 4).map((product, index) => (
-              <div key={product.id} className="group cursor-pointer animate-in fade-in slide-in-from-bottom duration-700" style={{ animationDelay: `${index * 100}ms` }}>
+              <a href="https://shop.undergroundvault.store" key={product.id} className="group cursor-pointer animate-in fade-in slide-in-from-bottom duration-700" style={{ animationDelay: `${index * 100}ms` }}>
                 <div className="relative aspect-square overflow-hidden bg-card/40 backdrop-blur-sm border border-white/5 mb-3">
                   <img 
                     src={product.image} 
@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-white font-heading font-bold uppercase tracking-wider text-[11px] mb-0.5 truncate">{product.name}</h3>
                 <p className="text-primary font-display text-xs">${product.price}</p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
