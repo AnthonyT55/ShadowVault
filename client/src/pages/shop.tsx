@@ -68,11 +68,13 @@ export default function Shop() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity" />
                   
-                  {/* Quick Add Button */}
+                  {/* Buy Button */}
                   <div className="absolute bottom-0 inset-x-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                    <Button className="w-full bg-primary text-white hover:bg-primary/90 rounded-none font-black uppercase tracking-[0.2em] text-sm h-16 border-2 border-primary shadow-2xl">
-                      Add to Cart
-                    </Button>
+                    <a href={product.stripeLink || "#"}>
+                      <Button className="w-full bg-primary text-white hover:bg-primary/90 rounded-none font-black uppercase tracking-[0.2em] text-sm h-16 border-2 border-primary shadow-2xl">
+                        Buy
+                      </Button>
+                    </a>
                   </div>
                 </div>
 

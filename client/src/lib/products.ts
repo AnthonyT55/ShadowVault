@@ -10,6 +10,7 @@ export interface Product {
   image: string;
   category: string;
   isNew?: boolean;
+  stripeLink?: string;
 }
 
 export const products: Product[] = [
@@ -20,6 +21,7 @@ export const products: Product[] = [
     image: product1,
     category: "Premium Scale",
     isNew: true,
+    stripeLink: "https://buy.stripe.com/mock_link_1",
   },
   {
     id: 2,
@@ -27,6 +29,7 @@ export const products: Product[] = [
     price: 89.99,
     image: product2,
     category: "Standard Series",
+    stripeLink: "https://buy.stripe.com/mock_link_2",
   },
   {
     id: 3,
@@ -35,6 +38,7 @@ export const products: Product[] = [
     image: product3,
     category: "Premium Scale",
     isNew: true,
+    stripeLink: "https://buy.stripe.com/mock_link_3",
   },
   {
     id: 4,
@@ -42,5 +46,6 @@ export const products: Product[] = [
     price: 199.99,
     image: product4,
     category: "Masterpiece",
+    stripeLink: "https://buy.stripe.com/mock_link_4",
   },
 ];
