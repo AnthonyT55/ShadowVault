@@ -53,11 +53,11 @@ export default function EarlyAccess() {
                 <span>Receive your digital key and start accessing restricted collection drops.</span>
               </li>
             </ul>
-            <a href="https://shop.undergroundvault.store">
+            <Link href="/shop">
               <Button className="bg-primary hover:bg-primary/90 text-white rounded-none px-12 py-6 uppercase tracking-widest font-bold cursor-pointer">
                 Shop to Qualify
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -26,7 +26,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "https://shop.undergroundvault.store", label: "Enter the Vault" },
+    { href: "/shop", label: "Enter the Vault" },
     { href: "/early-access", label: "Early Access" },
     { href: "/about", label: "About" },
   ];
@@ -76,22 +76,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <nav className="flex flex-col gap-8">
                   {navLinks.map((link) => (
-                    link.href.startsWith("http") ? (
-                      <a key={link.href} href={link.href} onClick={() => setIsOpen(false)}>
-                        <div className="text-2xl font-heading font-bold uppercase tracking-[0.2em] text-white hover:text-primary transition-colors cursor-pointer">
-                          {link.label}
-                        </div>
-                      </a>
-                    ) : (
-                      <Link key={link.href} href={link.href}>
-                        <div 
-                          onClick={() => setIsOpen(false)}
-                          className="text-2xl font-heading font-bold uppercase tracking-[0.2em] text-white hover:text-primary transition-colors cursor-pointer"
-                        >
-                          {link.label}
-                        </div>
-                      </Link>
-                    )
+                    <Link key={link.href} href={link.href}>
+                      <div 
+                        onClick={() => setIsOpen(false)}
+                        className="text-2xl font-heading font-bold uppercase tracking-[0.2em] text-white hover:text-primary transition-colors cursor-pointer"
+                      >
+                        {link.label}
+                      </div>
+                    </Link>
                   ))}
                 </nav>
               </SheetContent>

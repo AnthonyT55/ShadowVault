@@ -60,11 +60,11 @@ export default function Home() {
                     Limited drops of hand selected, premium quality, and authentic anime action figures for the collector with darker tastes. Skip the wait. Skip the stress. Improve your anime figure collection this week, without having to pay for shipping.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <a href="https://shop.undergroundvault.store">
+                    <Link href="/shop">
                       <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-16 text-lg tracking-[0.2em] uppercase font-black w-full sm:w-auto cursor-pointer border-2 border-primary transition-all hover:scale-105">
                         Step into the shadows
                       </Button>
-                    </a>
+                    </Link>
                     <Link href="/reviews">
                       <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 hover:text-white rounded-none px-8 h-16 text-lg tracking-[0.2em] uppercase bg-transparent backdrop-blur-md w-full sm:w-auto cursor-pointer border-2 transition-all hover:scale-105">
                         Reviews
@@ -93,29 +93,31 @@ export default function Home() {
                 <span className="text-primary italic">Last Drop</span>
               </h2>
             </div>
-            <a href="https://shop.undergroundvault.store">
+            <Link href="/shop">
               <Button variant="link" className="text-muted-foreground hover:text-primary p-0 h-auto font-bold uppercase tracking-widest text-[10px] flex items-center gap-2 group">
                 Shop Collection <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {products.slice(0, 4).map((product, index) => (
-              <a href="https://shop.undergroundvault.store" key={product.id} className="group cursor-pointer animate-in fade-in slide-in-from-bottom duration-700" style={{ animationDelay: `${index * 100}ms` }}>
-                <div className="relative aspect-square overflow-hidden bg-card/40 backdrop-blur-sm border border-white/5 mb-3">
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute top-2 left-2">
-                    <span className="bg-black/80 backdrop-blur-sm text-white text-[9px] px-1.5 py-0.5 uppercase tracking-tighter border border-white/10">Sold Out</span>
+              <Link href="/shop" key={product.id}>
+                <div className="group cursor-pointer animate-in fade-in slide-in-from-bottom duration-700" style={{ animationDelay: `${index * 100}ms` }}>
+                  <div className="relative aspect-square overflow-hidden bg-card/40 backdrop-blur-sm border border-white/5 mb-3">
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute top-2 left-2">
+                      <span className="bg-black/80 backdrop-blur-sm text-white text-[9px] px-1.5 py-0.5 uppercase tracking-tighter border border-white/10">Sold Out</span>
+                    </div>
                   </div>
+                  <h3 className="text-white font-heading font-bold uppercase tracking-wider text-[11px] mb-0.5 truncate">{product.name}</h3>
+                  <p className="text-primary font-display text-xs">${product.price}</p>
                 </div>
-                <h3 className="text-white font-heading font-bold uppercase tracking-wider text-[11px] mb-0.5 truncate">{product.name}</h3>
-                <p className="text-primary font-display text-xs">${product.price}</p>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
