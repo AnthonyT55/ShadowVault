@@ -1,7 +1,10 @@
-import product1 from "@assets/stock_images/dark_anime_action_fi_8d42d585.jpg";
-import product2 from "@assets/stock_images/dark_anime_action_fi_ee990bee.jpg";
-import product3 from "@assets/stock_images/dark_anime_action_fi_b8c1d619.jpg";
-import product4 from "@assets/stock_images/dark_anime_action_fi_b7df8cf7.jpg";
+import itachi from "@/assets/images/itachi.jpg";
+import sasuke from "@/assets/images/sasuke.jpg";
+import bundle from "@/assets/images/bundle.jpg";
+import sasukeChunin from "@/assets/images/sasuke-chunin.jpg";
+import gojo from "@/assets/images/gojo.jpg";
+import law from "@/assets/images/law.jpg";
+import shanks from "@/assets/images/shanks.jpg";
 
 export interface Product {
   id: number;
@@ -16,36 +19,60 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    name: "Abyssal Phantom - Limited Edition",
-    price: 149.99,
-    image: product1,
-    category: "Premium Scale",
+    name: "Combination Battle Itachi",
+    price: 159.99,
+    image: itachi,
+    category: "Combination Battle",
     isNew: true,
-    stripeLink: "https://buy.stripe.com/mock_link_1",
+    stripeLink: "https://buy.stripe.com/mock_itachi",
   },
   {
     id: 2,
-    name: "Cursed Soul: Void",
-    price: 89.99,
-    image: product2,
-    category: "Standard Series",
-    stripeLink: "https://buy.stripe.com/mock_link_2",
+    name: "Combination Battle Sasuke",
+    price: 159.99,
+    image: sasuke,
+    category: "Combination Battle",
+    stripeLink: "https://buy.stripe.com/mock_sasuke",
   },
   {
     id: 3,
-    name: "Shadow Reaper V2",
-    price: 129.99,
-    image: product3,
-    category: "Premium Scale",
+    name: "Combination Battle Itachi and Sasuke Bundle",
+    price: 299.99,
+    image: bundle,
+    category: "Bundle Exclusive",
     isNew: true,
-    stripeLink: "https://buy.stripe.com/mock_link_3",
+    stripeLink: "https://buy.stripe.com/mock_bundle",
   },
   {
     id: 4,
-    name: "Nightmare Harbinger",
-    price: 199.99,
-    image: product4,
-    category: "Masterpiece",
-    stripeLink: "https://buy.stripe.com/mock_link_4",
+    name: "Combination Battle Sasuke Uchiha (Chunin Exams)",
+    price: 149.99,
+    image: sasukeChunin,
+    category: "Combination Battle",
+    stripeLink: "https://buy.stripe.com/mock_sasuke_chunin",
+  },
+  {
+    id: 5,
+    name: "Satoru Gojo",
+    price: 179.99,
+    image: gojo,
+    category: "Premium Scale",
+    stripeLink: "https://buy.stripe.com/mock_gojo",
+  },
+  {
+    id: 6,
+    name: "Grandista Trafalgar Law",
+    price: 129.99,
+    image: law,
+    category: "Grandista",
+    stripeLink: "https://buy.stripe.com/mock_law",
+  },
+  {
+    id: 7,
+    name: "Battle Record Collection Shanks",
+    price: 139.99,
+    image: shanks,
+    category: "Battle Record",
+    stripeLink: "https://buy.stripe.com/mock_shanks",
   },
 ];

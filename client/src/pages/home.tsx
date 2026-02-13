@@ -88,7 +88,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
             <div className="max-w-xl">
-              <span className="text-primary text-xs font-bold tracking-[0.3em] uppercase block mb-3">Archive</span>
+              <span className="text-primary text-xs font-bold tracking-[0.3em] uppercase block mb-3">Latest</span>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-white uppercase leading-tight">
                 <span className="text-primary italic">Last Drop</span>
               </h2>
