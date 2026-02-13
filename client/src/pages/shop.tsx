@@ -16,10 +16,6 @@ export default function Shop() {
   const sortedProducts = useMemo(() => {
     const list = [...products];
     switch (sortBy) {
-      case "price-low":
-        return list.sort((a, b) => a.price - b.price);
-      case "price-high":
-        return list.sort((a, b) => b.price - a.price);
       case "newest":
         // Mocking date sort with ID for now as products don't have dates
         return list.sort((a, b) => b.id - a.id);
@@ -42,8 +38,6 @@ export default function Shop() {
               </SelectTrigger>
               <SelectContent className="bg-card border-white/10 text-white rounded-none">
                 <SelectItem value="featured" className="uppercase text-[10px] tracking-widest focus:bg-primary focus:text-white cursor-pointer">Featured</SelectItem>
-                <SelectItem value="price-low" className="uppercase text-[10px] tracking-widest focus:bg-primary focus:text-white cursor-pointer">Price: Low to High</SelectItem>
-                <SelectItem value="price-high" className="uppercase text-[10px] tracking-widest focus:bg-primary focus:text-white cursor-pointer">Price: High to Low</SelectItem>
                 <SelectItem value="newest" className="uppercase text-[10px] tracking-widest focus:bg-primary focus:text-white cursor-pointer">Newest Arrivals</SelectItem>
               </SelectContent>
             </Select>
@@ -84,10 +78,6 @@ export default function Shop() {
                   <h3 className="text-white font-heading text-3xl font-black leading-none mb-4 group-hover:text-primary transition-colors uppercase tracking-tighter">
                     {product.name}
                   </h3>
-                  <div className="flex items-center justify-between mt-6">
-                    <span className="text-3xl font-display font-black text-white tracking-tighter">${product.price}</span>
-                    <div className="h-[2px] flex-grow mx-4 bg-gradient-to-r from-primary to-transparent" />
-                  </div>
                 </div>
               </div>
             ))}

@@ -83,14 +83,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Previous Drop Section */}
+      {/* Featured Section */}
       <section className="py-20 relative z-10 bg-background/60 backdrop-blur-xl border-t border-white/5">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
             <div className="max-w-xl">
-              <span className="text-primary text-xs font-bold tracking-[0.3em] uppercase block mb-3">Latest</span>
+              <span className="text-primary text-xs font-bold tracking-[0.3em] uppercase block mb-3">Featured</span>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-white uppercase leading-tight">
-                <span className="text-primary italic">Last Drop</span>
+                <span className="text-primary italic">Collection</span>
               </h2>
             </div>
             <Link href="/shop">
@@ -100,8 +100,10 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.slice(0, 4).map((product, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {products
+              .filter(p => ["Grandista Trafalgar Law", "Satoru Gojo", "Battle Record Collection Shanks"].includes(p.name))
+              .map((product, index) => (
               <Link href="/shop" key={product.id}>
                 <div className="group cursor-pointer animate-in fade-in slide-in-from-bottom duration-700" style={{ animationDelay: `${index * 100}ms` }}>
                   <div className="relative aspect-square overflow-hidden bg-card/40 backdrop-blur-sm border border-white/5 mb-3">
@@ -111,11 +113,10 @@ export default function Home() {
                       className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
                     />
                     <div className="absolute top-2 left-2">
-                      <span className="bg-black/80 backdrop-blur-sm text-white text-[9px] px-1.5 py-0.5 uppercase tracking-tighter border border-white/10">Sold Out</span>
+                      <span className="bg-black/80 backdrop-blur-sm text-white text-[9px] px-1.5 py-0.5 uppercase tracking-tighter border border-white/10">Available</span>
                     </div>
                   </div>
                   <h3 className="text-white font-heading font-bold uppercase tracking-wider text-[11px] mb-0.5 truncate">{product.name}</h3>
-                  <p className="text-primary font-display text-xs">${product.price}</p>
                 </div>
               </Link>
             ))}

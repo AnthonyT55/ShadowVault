@@ -9,7 +9,6 @@ import shanks from "@/assets/images/shanks.jpg";
 export interface Product {
   id: number;
   name: string;
-  price: number;
   image: string;
   category: string;
   isNew?: boolean;
@@ -20,7 +19,6 @@ export const products: Product[] = [
   {
     id: 1,
     name: "Combination Battle Itachi",
-    price: 159.99,
     image: itachi,
     category: "Combination Battle",
     isNew: true,
@@ -29,7 +27,6 @@ export const products: Product[] = [
   {
     id: 2,
     name: "Combination Battle Sasuke",
-    price: 159.99,
     image: sasuke,
     category: "Combination Battle",
     stripeLink: "https://buy.stripe.com/mock_sasuke",
@@ -37,7 +34,6 @@ export const products: Product[] = [
   {
     id: 3,
     name: "Combination Battle Itachi and Sasuke Bundle",
-    price: 299.99,
     image: bundle,
     category: "Bundle Exclusive",
     isNew: true,
@@ -46,7 +42,6 @@ export const products: Product[] = [
   {
     id: 4,
     name: "Combination Battle Sasuke Uchiha (Chunin Exams)",
-    price: 149.99,
     image: sasukeChunin,
     category: "Combination Battle",
     stripeLink: "https://buy.stripe.com/mock_sasuke_chunin",
@@ -54,7 +49,6 @@ export const products: Product[] = [
   {
     id: 5,
     name: "Satoru Gojo",
-    price: 179.99,
     image: gojo,
     category: "Premium Scale",
     stripeLink: "https://buy.stripe.com/mock_gojo",
@@ -62,7 +56,6 @@ export const products: Product[] = [
   {
     id: 6,
     name: "Grandista Trafalgar Law",
-    price: 129.99,
     image: law,
     category: "Grandista",
     stripeLink: "https://buy.stripe.com/mock_law",
@@ -70,7 +63,6 @@ export const products: Product[] = [
   {
     id: 7,
     name: "Battle Record Collection Shanks",
-    price: 139.99,
     image: shanks,
     category: "Battle Record",
     stripeLink: "https://buy.stripe.com/mock_shanks",
