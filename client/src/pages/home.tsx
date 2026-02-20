@@ -65,11 +65,6 @@ export default function Home() {
                         Step into the shadows
                       </Button>
                     </Link>
-                    <Link href="/reviews">
-                      <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 hover:text-white rounded-none px-8 h-16 text-lg tracking-[0.2em] uppercase bg-transparent backdrop-blur-md w-full sm:w-auto cursor-pointer border-2 transition-all hover:scale-105">
-                        Reviews
-                      </Button>
-                    </Link>
                   </div>
                 </div>
               </div>

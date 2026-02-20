@@ -37,7 +37,7 @@ export const products: Product[] = [
     image: bundle,
     category: "Bundle Exclusive",
     isNew: true,
-    stripeLink: "https://buy.stripe.com/mock_bundle",
+    stripeLink: "https://buy.stripe.com/5kQ4gBb2daYRaWq62C57W07",
   },
   {
     id: 4,
