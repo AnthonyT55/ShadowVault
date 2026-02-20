@@ -1,10 +1,10 @@
-import itachi from "@/assets/images/itachi.jpg";
-import sasuke from "@/assets/images/sasuke.jpg";
-import bundle from "@/assets/images/bundle.jpg";
-import sasukeChunin from "@/assets/images/sasuke-chunin.jpg";
-import gojo from "@/assets/images/gojo.jpg";
-import law from "@/assets/images/law.jpg";
-import shanks from "@/assets/images/shanks.jpg";
+import itachi from "@/assets/products/itachi.jpg";
+import sasuke from "@/assets/products/sasuke.jpg";
+import bundle from "@/assets/products/bundle.jpg";
+import sasukeChunin from "@/assets/products/sasuke-chunin.jpg";
+import gojo from "@/assets/products/gojo.jpg";
+import law from "@/assets/products/law.jpg";
+import shanks from "@/assets/products/shanks.jpg";
 
 export interface Product {
   id: number;
