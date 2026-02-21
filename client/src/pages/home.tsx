@@ -20,33 +20,32 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section - LANDING ONLY */}
-      <section className="relative w-full overflow-hidden flex items-center bg-black">
-        {/* Background Image Container with Aspect Ratio */}
-        <div className="w-full relative">
+      <section className="relative min-h-[80vh] flex items-center pt-20 overflow-hidden bg-black">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/20 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50 z-10" />
           <img 
-            src={heroImage} 
-            alt="Dark Anime Swordsman" 
-            className="w-full h-auto block opacity-100"
+            src={heroImage}
+            alt="Anime Figure Collection"
+            className="w-full h-full object-cover opacity-60 scale-105 md:opacity-40"
           />
-          {/* Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent opacity-40" />
-          
-          {/* Hero Content - Positioned absolutely over the image */}
-          <div className="absolute inset-0 flex items-center">
-            <div className="container mx-auto px-4 pt-20 pb-12">
-              <div className="max-w-4xl animate-in slide-in-from-left duration-1000 fade-in">
-                <span className="inline-block py-1 px-3 border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-[0.2em] uppercase mb-6 backdrop-blur-sm">
-                  New Collection Drop
-                </span>
-                <h1 className="text-5xl md:text-7xl font-heading font-black text-white leading-tight mb-8 text-glow uppercase tracking-tighter flex flex-wrap gap-x-4">
-                  {"Where side characters become centerpieces".split(" ").map((word, i) => (
-                    <span 
-                      key={i} 
-                      className="inline-block animate-in fade-in slide-in-from-bottom duration-500 fill-mode-both"
-                      style={{ animationDelay: `${i * 150}ms` }}
-                    >
-                      {word === "side" || word === "centerpieces" ? (
+        </div>
+
+        <div className="container mx-auto px-4 relative z-20">
+          <div className="max-w-4xl">
+            <div className="space-y-6 md:space-y-8">
+              <div 
+                className="inline-block animate-in fade-in slide-in-from-left duration-1000 fill-mode-both"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-[1px] w-8 bg-primary" />
+                  <span className="text-primary text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase">Premium Imports</span>
+                </div>
+                <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-heading font-black text-white leading-[0.9] tracking-tighter uppercase italic mb-8">
+                  {["Step", "into", "the", "Vault"].map((word, i) => (
+                    <span key={i} className="inline-block mr-[0.2em] last:mr-0">
+                      {word === "Vault" ? (
                         <span className="text-primary italic">{word}</span>
                       ) : word}
                     </span>
@@ -56,7 +55,7 @@ export default function Home() {
                   className="animate-in fade-in slide-in-from-bottom duration-1000 fill-mode-both"
                   style={{ animationDelay: "1.2s" }}
                 >
-                  <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed font-light tracking-wide">
+                  <p className="text-base md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed font-light tracking-wide">
                     Limited drops of hand selected, premium quality, and authentic anime action figures for the collector with darker tastes. Skip the wait. Skip the stress. Improve your anime figure collection this week, without having to pay for shipping.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
