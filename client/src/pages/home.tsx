@@ -23,12 +23,12 @@ export default function Home() {
       <section className="relative min-h-[80vh] flex items-center pt-20 overflow-hidden bg-black">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/20 z-10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/10 md:to-background/20 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40 md:to-background/50 z-10" />
           <img 
             src={heroImage}
             alt="Anime Figure Collection"
-            className="w-full h-full object-cover opacity-60 scale-105 md:opacity-40"
+            className="w-full h-full object-contain md:object-cover opacity-80 md:opacity-40"
           />
         </div>
 
