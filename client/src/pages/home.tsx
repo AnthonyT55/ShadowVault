@@ -28,7 +28,7 @@ export default function Home() {
           <img 
             src={heroImage}
             alt="Anime Figure Collection"
-            className="w-full h-full object-contain md:object-cover opacity-80 md:opacity-40"
+            className="w-full h-full object-cover md:object-cover opacity-80 md:opacity-40"
           />
         </div>
 
