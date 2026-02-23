@@ -54,7 +54,10 @@ export default function Shop() {
                 )}
                 
                 {/* Image Container */}
-                <div className="aspect-[3/4] overflow-hidden relative bg-black">
+                <div 
+                  className="aspect-[3/4] overflow-hidden relative bg-black cursor-pointer"
+                  onClick={() => product.stripeLink && window.open(product.stripeLink, '_blank')}
+                >
                   <img 
                     src={product.image} 
                     alt={product.name}
@@ -64,8 +67,13 @@ export default function Shop() {
                   
                   {/* Buy Button */}
                   <div className="absolute bottom-0 inset-x-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                    <a href={product.stripeLink || "#"}>
-                      <Button className="w-full bg-primary text-white hover:bg-primary/90 rounded-none font-black uppercase tracking-[0.2em] text-sm h-16 border-2 border-primary shadow-2xl">
+                    <a 
+                      href={product.stripeLink || "#"} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Button className="w-full bg-primary text-white hover:bg-white hover:text-black rounded-none font-black uppercase tracking-[0.2em] text-sm h-16 border-2 border-primary shadow-2xl transition-all">
                         Buy
                       </Button>
                     </a>
