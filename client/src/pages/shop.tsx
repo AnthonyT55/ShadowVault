@@ -55,17 +55,15 @@ export default function Shop() {
                 
                 {/* Image Container */}
                 <div className="aspect-[3/4] overflow-hidden relative bg-black">
-                  <a href={product.stripeLink || "#"} className="block w-full h-full">
-                    <img 
-                      src={product.image} 
-                      alt={product.name}
-                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-125 opacity-100 group-hover:brightness-110 group-hover:contrast-110"
-                    />
-                  </a>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity pointer-events-none" />
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-125 opacity-100 group-hover:brightness-110 group-hover:contrast-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity" />
                   
                   {/* Buy Button */}
-                  <div className="absolute bottom-0 inset-x-0 p-6 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                  <div className="absolute bottom-0 inset-x-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
                     <a href={product.stripeLink || "#"}>
                       <Button className="w-full bg-primary text-white hover:bg-primary/90 rounded-none font-black uppercase tracking-[0.2em] text-sm h-16 border-2 border-primary shadow-2xl">
                         Buy
